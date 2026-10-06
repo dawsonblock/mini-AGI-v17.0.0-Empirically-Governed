@@ -1,0 +1,20 @@
+{
+  "release": "12.3.0",
+  "release_name": "EGAI_RC12_3_AppleSilicon_Performance_Full_Upgraded",
+  "schema": "egai.rc12.3.apple.artifact-manifest.v1",
+  "source_closure_file": "release/RC12_3_APPLE_SOURCE_CLOSURE.json",
+  "source_closure_sha256": "sha256:f623d5f5efec2ccb086a1230be64c343b2183bf41eb5f48d1043a5927f9902db",
+  "validation": {
+    "apple_hardware_validation": "not run on generation host",
+    "authority_pytest": "101/101 passed",
+    "cross_plane_smoke": "passed",
+    "oracle_pytest": "25/25 passed",
+    "portable_native_ctest": "25/25 passed",
+    "runtime_pytest": "173/173 passed"
+  },
+  "wheel": {
+    "bytes": 303623,
+    "path": "release/wheels/egai_kvcontinual_runtime-12.3.0-py3-none-any.whl",
+    "sha256": "sha256:d906b373eb538d6e384f0a4009e020ce2cb0860fba30d6e354a86de0eab04461"
+  }
+}

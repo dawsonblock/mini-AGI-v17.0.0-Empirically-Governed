@@ -1,0 +1,19 @@
+{
+  "release": "RC10.25-macOS",
+  "version": "0.10.25",
+  "target": "macOS-arm64",
+  "python_tests": {
+    "passed": 110,
+    "failed": 0
+  },
+  "portable_cpp_affine_reference": "pass",
+  "python_wheel": "dist/kvcontinual-0.10.25-py3-none-any.whl",
+  "python_wheel_sha256": "30fb0a36d2ec0bcbf502faa6822eb28be5edb11902f1eb6888bb8f9494aa3d50",
+  "isolated_wheel_import": "pass",
+  "target_macos_qualification_preflight_tests": "pass",
+  "preflight_hardware_evidence": "not-run-non-macos",
+  "transactional_deployment_authority_retained": true,
+  "content_bound_hardware_qualification_retained": true,
+  "metal_validation": "not-run-non-macos",
+  "production_hypic_default": "fail-closed until target Apple-Silicon preflight and paired exact-vs-accelerated qualification pass"
+}

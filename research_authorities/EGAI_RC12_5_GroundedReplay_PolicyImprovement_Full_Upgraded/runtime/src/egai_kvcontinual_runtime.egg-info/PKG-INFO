@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: egai-kvcontinual-runtime
+Version: 12.5.0
+Summary: RC12.5 grounded replay policy-improvement runtime with frozen-base forward transfer, target-Mac qualification, live canary gating, and independent promotion
+Requires-Python: >=3.11
+Requires-Dist: numpy>=2.0
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn>=0.30
+Requires-Dist: pydantic>=2.8
+Requires-Dist: httpx>=0.27
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: cryptography>=43
+Provides-Extra: security
+Requires-Dist: cryptography>=43; extra == "security"
+Provides-Extra: ml
+Requires-Dist: torch>=2.5; extra == "ml"
+Requires-Dist: transformers>=4.53; extra == "ml"
+Requires-Dist: peft>=0.14; extra == "ml"
+Requires-Dist: trl>=0.15; extra == "ml"
+Requires-Dist: safetensors>=0.4; extra == "ml"
+Requires-Dist: faiss-cpu>=1.9; extra == "ml"
+Provides-Extra: mac
+Requires-Dist: mlx-lm>=0.31.3; (platform_system == "Darwin" and platform_machine == "arm64") and extra == "mac"
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: ruff>=0.8; extra == "dev"
+Requires-Dist: cryptography>=43; extra == "dev"

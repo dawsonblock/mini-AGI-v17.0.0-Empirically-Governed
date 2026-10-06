@@ -1,0 +1,24 @@
+{
+  "release_name": "kvmem-qw3-hardening-rc9.2",
+  "release_date": "2026-10-04",
+  "source_archive": "kvmem-qw3-main.zip",
+  "source_archive_sha256": "000428f4f198920e292117d34f432af0703b40fe9d836f391c1a285c351823f7",
+  "upstream_git_history_present_in_source_archive": false,
+  "upstream_baseline_note": "The imported archive did not contain .git metadata. docs/release_baseline.md identifies an earlier public baseline; this release anchors provenance to the imported source archive plus the parent hardening artifact hash rather than claiming identity with an upstream tag.",
+  "parent_hardening_artifact": "kvmem-qw3-hardening-rc9.1-full-upgraded.zip",
+  "parent_hardening_artifact_sha256": "34476720882726db452e467e0991ca821ea06fb3eab257574e40d07696daa1bf",
+  "release_scope": [
+    "RC9.1 exact scheduler/physical lease fencing retained",
+    "strict public workspace binding plus trusted internal maintenance lookup",
+    "decode-time prompt/response boundary mean-key merge",
+    "contiguous sub-block decode mean-index merge",
+    "block-count-scalable ExactMass CUDA kernel",
+    "explicit ExactMass raw-key allocation cap and overflow rejection",
+    "13,001-block ExactMass CUDA regression test",
+    "explicit persistent-session physical executor pool scope",
+    "RC9.2 release/source/provenance consistency enforcement",
+    "known-issue ledger reconciliation",
+    "one-slot native CUDA certification boundary retained",
+    "persistent hybrid selected-replay remains fail-closed"
+  ]
+}

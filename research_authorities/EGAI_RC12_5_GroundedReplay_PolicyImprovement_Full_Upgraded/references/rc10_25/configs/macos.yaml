@@ -1,0 +1,27 @@
+platform: macos
+architecture: arm64
+execution:
+  preferred_device: mps
+  mps_fallback_to_cpu: true
+  cuda: false
+  hypic_native_metal: experimental_not_production
+  exact_selected_replay: enabled
+  exact_prefix_checkpoint_restore: unavailable_in_transformers_backend
+recurrent_reference:
+  preferred_array_backend: mlx
+  fallback: numpy
+native_host:
+  build_server: false
+  build_tests: true
+  build_inspector: true
+cache:
+  execution_identity_suffix: macos-mps
+  parameter_change_policy: replay_required
+
+qwen35_live_capture:
+  structural_adapter: hf-qwen3.5-text-structural-v1
+  key_head_mapping: qwen_repeat_interleave
+  conv_boundary_payload: outgoing_raw_conv_input_history
+  attention_position_strategy: model_reapply_pre_rope
+  execution_artifact_abi: kvcontinual-execution-artifact-v2
+  production_hypic_enabled: false

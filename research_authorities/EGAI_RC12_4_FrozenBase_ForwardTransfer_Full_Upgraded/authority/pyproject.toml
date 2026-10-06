@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-agi-v6"
+version = "6.0.0"
+description = "Controlled continual-learning research system with virtual experts, reversible adapters, cryptographic promotion, trainable process rewards, audited routing and safe agent infrastructure"
+requires-python = ">=3.10"
+dependencies = ["torch", "numpy", "pyyaml", "flask"]
+
+[project.optional-dependencies]
+v4 = ["tokenizers>=0.20", "sentence-transformers>=3.0", "cryptography>=42"]
+v5 = ["tokenizers>=0.20", "sentence-transformers>=3.0", "cryptography>=42"]
+v6 = ["tokenizers>=0.20", "sentence-transformers>=3.0", "cryptography>=42"]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]

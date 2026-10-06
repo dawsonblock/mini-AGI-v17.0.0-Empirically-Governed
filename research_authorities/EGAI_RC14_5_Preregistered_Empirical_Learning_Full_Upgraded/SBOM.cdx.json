@@ -1,0 +1,343 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "kvcontinual-execution@14.5.0",
+      "name": "kvcontinual-execution",
+      "type": "library",
+      "version": "14.5.0"
+    },
+    {
+      "bom-ref": "minagi-egai-governance@14.5.0",
+      "name": "minagi-egai-governance",
+      "type": "library",
+      "version": "14.5.0"
+    },
+    {
+      "bom-ref": "egai-research-kernel@14.5.0",
+      "name": "egai-research-kernel",
+      "type": "library",
+      "version": "14.5.0"
+    },
+    {
+      "bom-ref": "python-requirement:required:numpy",
+      "name": "numpy",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "numpy>=2.0"
+        },
+        {
+          "name": "dependency-group",
+          "value": "required"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:required:cryptography",
+      "name": "cryptography",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "cryptography>=43"
+        },
+        {
+          "name": "dependency-group",
+          "value": "required"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:required:fastapi",
+      "name": "fastapi",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "fastapi>=0.115"
+        },
+        {
+          "name": "dependency-group",
+          "value": "required"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:required:uvicorn",
+      "name": "uvicorn",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "uvicorn>=0.30"
+        },
+        {
+          "name": "dependency-group",
+          "value": "required"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:required:pydantic",
+      "name": "pydantic",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "pydantic>=2.8"
+        },
+        {
+          "name": "dependency-group",
+          "value": "required"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:required:httpx",
+      "name": "httpx",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "httpx>=0.27"
+        },
+        {
+          "name": "dependency-group",
+          "value": "required"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:required:PyYAML",
+      "name": "PyYAML",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "PyYAML>=6.0"
+        },
+        {
+          "name": "dependency-group",
+          "value": "required"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:ml:torch",
+      "name": "torch",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "torch>=2.5"
+        },
+        {
+          "name": "dependency-group",
+          "value": "ml"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:ml:transformers",
+      "name": "transformers",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "transformers>=4.53"
+        },
+        {
+          "name": "dependency-group",
+          "value": "ml"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:ml:peft",
+      "name": "peft",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "peft>=0.14"
+        },
+        {
+          "name": "dependency-group",
+          "value": "ml"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:ml:trl",
+      "name": "trl",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "trl>=0.15"
+        },
+        {
+          "name": "dependency-group",
+          "value": "ml"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:ml:safetensors",
+      "name": "safetensors",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "safetensors>=0.4"
+        },
+        {
+          "name": "dependency-group",
+          "value": "ml"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:ml:faiss-cpu",
+      "name": "faiss-cpu",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "faiss-cpu>=1.9"
+        },
+        {
+          "name": "dependency-group",
+          "value": "ml"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:mac:mlx-lm",
+      "name": "mlx-lm",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "mlx-lm>=0.31.3; platform_system == 'Darwin' and platform_machine == 'arm64'"
+        },
+        {
+          "name": "dependency-group",
+          "value": "mac"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:dev:pytest",
+      "name": "pytest",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "pytest>=8"
+        },
+        {
+          "name": "dependency-group",
+          "value": "dev"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:dev:build",
+      "name": "build",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "build>=1"
+        },
+        {
+          "name": "dependency-group",
+          "value": "dev"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "python-requirement:dev:ruff",
+      "name": "ruff",
+      "properties": [
+        {
+          "name": "declared-requirement",
+          "value": "ruff>=0.8"
+        },
+        {
+          "name": "dependency-group",
+          "value": "dev"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "vendored:httplib.h",
+      "name": "httplib.h",
+      "properties": [
+        {
+          "name": "source-location",
+          "value": "third_party/httplib.h"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "vendored:json.hpp",
+      "name": "json.hpp",
+      "properties": [
+        {
+          "name": "source-location",
+          "value": "third_party/json.hpp"
+        }
+      ],
+      "type": "library"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "kvcontinual-execution@14.5.0",
+        "minagi-egai-governance@14.5.0",
+        "egai-research-kernel@14.5.0",
+        "python-requirement:required:numpy",
+        "python-requirement:required:cryptography",
+        "python-requirement:required:fastapi",
+        "python-requirement:required:uvicorn",
+        "python-requirement:required:pydantic",
+        "python-requirement:required:httpx",
+        "python-requirement:required:PyYAML",
+        "python-requirement:ml:torch",
+        "python-requirement:ml:transformers",
+        "python-requirement:ml:peft",
+        "python-requirement:ml:trl",
+        "python-requirement:ml:safetensors",
+        "python-requirement:ml:faiss-cpu",
+        "python-requirement:mac:mlx-lm",
+        "python-requirement:dev:pytest",
+        "python-requirement:dev:build",
+        "python-requirement:dev:ruff"
+      ],
+      "ref": "mini-agi-converged@14.5.0"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "mini-agi-converged@14.5.0",
+      "name": "mini-agi-converged",
+      "type": "library",
+      "version": "14.5.0"
+    }
+  },
+  "properties": [
+    {
+      "name": "mini-agi:dependency-resolution",
+      "value": "declared ranges; see pyproject.toml, not a production lockfile"
+    }
+  ],
+  "specVersion": "1.5",
+  "version": 1
+}

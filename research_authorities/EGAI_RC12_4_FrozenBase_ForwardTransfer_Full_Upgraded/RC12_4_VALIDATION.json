@@ -1,0 +1,25 @@
+{
+  "release": "12.4.0",
+  "profile": "Frozen-Base Forward Transfer Qualification",
+  "validation": {
+    "runtime_pytest": {"status": "passed", "tests": 187},
+    "authority_pytest": {"status": "passed", "tests": 101},
+    "oracle_reference_pytest": {"status": "passed", "tests": 25},
+    "portable_native_ctest": {"status": "passed", "tests": 25, "cuda": false, "metal_kernel": false},
+    "cross_plane_integration_smoke": {"status": "passed"},
+    "python_compileall": {"status": "passed"},
+    "shell_syntax": {"status": "passed"},
+    "wheel_build": {"status": "passed", "method": "pip wheel --no-build-isolation"},
+    "isolated_wheel_import": {"status": "passed", "version": "12.4.0"},
+    "source_closure": {"status": "performed_after_validation_file_freeze"},
+    "zip_crc": {"status": "performed_after_archive_creation"}
+  },
+  "scientific_claims_not_yet_made": [
+    "positive frozen-base forward transfer on a real 1000-5000 task sequential stream",
+    "target-Mac Metal/HYPIC equivalence unless separately qualified on the exact Apple machine",
+    "automatic adapter promotion",
+    "learned plasticity authority",
+    "shared-weight online learning",
+    "architecture self-modification"
+  ]
+}

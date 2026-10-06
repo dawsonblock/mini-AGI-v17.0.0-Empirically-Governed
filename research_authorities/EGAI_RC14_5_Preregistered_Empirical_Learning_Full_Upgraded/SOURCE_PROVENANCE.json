@@ -1,0 +1,29 @@
+{
+  "base": {
+    "archive": "EGAI_RC13_3_1_Transactional_StateEpoch_Hardened_Full_Upgraded.zip",
+    "role": "authoritative production substrate",
+    "sha256": "39f593791ccc859896d2b1d9efa6f4e43a918e7a46a75ca3a4777ad9616685e0"
+  },
+  "donors": [
+    {
+      "archive": "mini-AGI-v14.0.0-Governed-Complementary-Continual-Full-Upgraded.zip",
+      "role": "governance/continual-learning concepts",
+      "sha256": "05e46b7544d673551538b14ac13bcc6583132b57156c24a6c8bc49850812db60"
+    },
+    {
+      "archive": "EGAI_RC13_0_StateEpoch_Converged_Runtime_Full_Upgraded.zip",
+      "role": "rich StateEpoch/pinning/lifecycle concepts",
+      "sha256": "c32486b6e707530771630671b09c74adf84c0da44ae8f046cd4e3eeffc73e61b"
+    }
+  ],
+  "integration_note": "RC14 was implemented on RC13.3.1. V14 CandidateStateStore was not copied as authority; RC14 replaces it with signed process-serialized transitions. RC13.0 concepts were reimplemented inside minagi.rc14 rather than importing a second authority stack.",
+  "rc14_1": "Service-isolated FreshTask authority support, mandatory ExecutionContext guard, stricter cross-candidate promotion closure, and candidate-authorization gating for StateEpoch preparation.",
+  "rc14_2": "Authenticated evaluator/admin FreshTask capabilities, immutable recorded falsification runs, derived qualification evidence, signed evidence attestations, request-source epoch binding, candidate-derived StateEpoch promotion closure, and fresh portable native requalification.",
+  "rc14_3": "Typed independently signed external witness + runtime attestation, strict serving closure, whole-request ExecutionContext pinning, secret-file permission hardening, and fresh portable native requalification.",
+  "rc14_4": "Proposal-only semantic belief revision with independent-source contradiction handling; cross-task skill induction requiring fresh held-out transfer; diversity-constrained adaptive replay ranking; hash-chained continual experiment/ablation ledger; measured forgetting/transfer/interference promotion-evidence gates; fresh portable native requalification.",
+  "rc14_5": "Preregistered fixed ablation ladder, multi-seed immutable experiment protocol, isolated neural-memory manifest/frozen-foundation proof, and replay-verified L6 qualification evidence.",
+  "rc14_hotfix": "RC14.0.1 authority-closure hotfix incorporated as RC14.1 baseline",
+  "release": "EGAI_RC14_5_Preregistered_Empirical_Learning_Full_Upgraded",
+  "schema": "egai-rc14-source-provenance-v1",
+  "version": "14.5.0"
+}

@@ -1,0 +1,22 @@
+{
+  "artifacts": [
+    {
+      "bytes": 315842,
+      "path": "release/wheels/egai_kvcontinual_runtime-12.4.0-py3-none-any.whl",
+      "sha256": "sha256:5ab0f43fc94ccdba57d305f2e4705148b805a9896e4a5faad64436128a9a97c5"
+    },
+    {
+      "bytes": 219657,
+      "path": "release/RC12_4_FROZEN_TRANSFER_SOURCE_CLOSURE.json",
+      "sha256": "sha256:8e16daf71319ed11c8a74619d7ed22f524f16273f6bd37b758b6593df9154bd8"
+    },
+    {
+      "bytes": 1210,
+      "path": "RC12_4_VALIDATION.json",
+      "sha256": "sha256:7b769fbf0c8ee8c6360b59c5bcf1fec93c9d1a56f4f108c5aa1e0bca0de21b97"
+    }
+  ],
+  "release": "12.4.0",
+  "schema": "egai.rc12.4.frozen-transfer.artifact-manifest.v1",
+  "source_closure_digest": "sha256:a5d66dd9ff38310d8932ce927a4d86f3e1fd956702752c9e542e9907a888d800"
+}

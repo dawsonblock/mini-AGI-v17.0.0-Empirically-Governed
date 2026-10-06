@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+CMD="${1:-help}"
+shift || true
+case "$CMD" in
+  install) exec "$ROOT/macos/install.sh" "$@" ;;
+  bootstrap) exec "$ROOT/macos/bootstrap.sh" "$@" ;;
+  verify) exec "$ROOT/macos/verify_install.sh" "$@" ;;
+  test) exec "$ROOT/macos/run_all_tests.sh" "$@" ;;
+  benchmark) exec "$ROOT/macos/benchmark.sh" "$@" ;;
+  benchmark-perf) exec "$ROOT/macos/benchmark_performance.py" "$@" ;;
+  apple-profile) exec "$ROOT/macos/apple_profile.py" "$@" ;;
+  optimize-mlx) exec "$ROOT/macos/optimize_mlx_model.py" "$@" ;;
+  qualify-apple) exec "$ROOT/macos/apple_qualification.py" "$@" ;;
+  qualify-target-mac) exec "$ROOT/macos/qualify_target_mac.py" "$@" ;;
+  benchmark-diff) exec "$ROOT/macos/benchmark_differential.py" "$@" ;;
+  benchmark-context-reuse) exec "$ROOT/macos/benchmark_context_reuse.py" "$@" ;;
+  compare-backends) exec "$ROOT/macos/compare_backends.py" "$@" ;;
+  generate-eq-prompts) exec "$ROOT/macos/generate_equivalence_prompts.py" "$@" ;;
+  attach-intermediate) exec "$ROOT/macos/attach_intermediate_metrics.py" "$@" ;;
+  verify-target-mac) exec "$ROOT/macos/verify_target_qualification.py" "$@" ;;
+  doctor) exec "$ROOT/macos/doctor.sh" "$@" ;;
+  build-host) exec "$ROOT/macos/build_host.sh" "$@" ;;
+  backend-llama) exec "$ROOT/macos/run_llama_cpp.sh" "$@" ;;
+  backend-llama-fast) exec "$ROOT/macos/run_llama_cpp_fast.py" "$@" ;;
+  backend-mlx) exec "$ROOT/macos/run_mlx.sh" "$@" ;;
+  gateway) exec "$ROOT/macos/run_gateway.sh" "$@" ;;
+  train-lora) exec "$ROOT/macos/train_lora.sh" "$@" ;;
+  learning-cycle) exec "$ROOT/macos/learning_cycle.sh" "$@" ;;
+  gdn-check) exec "$ROOT/macos/gdn_reference_check.py" "$@" ;;
+  rc11-validate) exec "$ROOT/scripts/rc11/validate_release.sh" "$@" ;;
+  *)
+    cat <<EOF
+Usage: macos/qw3-mac <command>
+  install         Install Mac dependencies and Python environment
+  bootstrap       Install + doctor + initialize local data directories
+  verify          Verify the installed Python/control-plane environment
+  test            Run Python and native host test suites
+  benchmark       Run a small end-to-end gateway latency smoke benchmark
+  benchmark-perf  Measure streaming TTFT and decode tokens/sec
+  apple-profile   Generate a conservative unified-memory/context profile
+  doctor          Verify Apple Silicon, tools, RAM, and backend status
+  build-host      Build/test native host utilities (no generation)
+  backend-llama   Start baseline llama.cpp Metal backend
+  backend-llama-fast Start feature-detected optimized llama.cpp Metal backend
+  backend-mlx     Start MLX backend (QW3_MLX_MODEL)
+  optimize-mlx    Build a local 4/8-bit MLX conversion after CLI capability detection
+  qualify-apple   Emit hardware/model-bound performance qualification evidence
+  benchmark-diff  Capture paired differential SSE bundles
+  benchmark-context-reuse Measure repeated-context TTFT behavior
+  compare-backends Compare two benchmark JSON summaries
+  generate-eq-prompts Generate public deterministic equivalence prompts
+  attach-intermediate Attach native state/logit metrics to a run bundle
+  qualify-target-mac Build exact-tuple target-Mac evidence
+  verify-target-mac Verify target-Mac evidence integrity
+  gateway         Start continual-memory OpenAI-compatible gateway on :8088
+  train-lora      Train a candidate MLX LoRA from data/training/train.jsonl
+  learning-cycle  Export verified episodes, train MLX LoRA, register immutable candidate
+  gdn-check       Validate the model-specific CPU Gated-DeltaNet (T,Z) reference
+  rc11-validate   Run RC11 regression suites plus release-tree integrity verification
+EOF
+    ;;
+esac

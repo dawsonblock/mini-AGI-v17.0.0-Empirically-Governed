@@ -1,0 +1,63 @@
+{
+  "schema_version": 3,
+  "session_policy": "detachable-host-state",
+  "profiles": {
+    "agent-safe": {
+      "certification": "host-contract-tested; gpu-runtime-not-qualified-in-rc3-build-environment",
+      "kvmem": true,
+      "retrieval_method": "mean-k",
+      "strict_retrieval": true,
+      "query_conditioned": true,
+      "query_replay": true,
+      "immutable_source_k": true,
+      "semantic_expansion": "message",
+      "update_mode": "step",
+      "continuous_batching": false,
+      "state_coherence": "selected-replay",
+      "persistent_sessions": false,
+      "limitations": [
+        "selected-replay is one-shot only above the selection budget",
+        "persistent kvmem sessions/local cache are rejected"
+      ]
+    },
+    "agent-fast": {
+      "certification": "host-contract-tested; approximate hybrid-state semantics",
+      "kvmem": true,
+      "retrieval_method": "mean-k",
+      "strict_retrieval": true,
+      "query_conditioned": true,
+      "query_replay": true,
+      "immutable_source_k": true,
+      "semantic_expansion": "message",
+      "update_mode": "step",
+      "continuous_batching": false,
+      "state_coherence": "query-replay",
+      "persistent_sessions": true,
+      "session_policy": "detachable-host-state",
+      "limitations": [
+        "KVMI-012 applies above budget",
+        "cold mounts rebuild canonical host state; live CUDA/device state is not detachable",
+        "keep_selected is rejected across a cold switch",
+        "native backend certifies one physical executor slot"
+      ]
+    },
+    "throughput": {
+      "certification": "experimental",
+      "kvmem": true,
+      "continuous_batching": true,
+      "state_coherence": "attention-kv",
+      "persistent_sessions": false,
+      "limitations": [
+        "KVMI-012 applies above budget"
+      ]
+    },
+    "custom": {
+      "certification": "uncertified"
+    },
+    "research": {
+      "certification": "uncertified-research"
+    }
+  },
+  "executor_scheduler": "lru-affinity-fail-fast",
+  "executor_slots_certified": 1
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "case_id": "delete-middle-001",
+    "payload": {"source": ["A","B","C","D"], "selected": ["A","D"], "query": "continue"},
+    "topology": "ARBITRARY",
+    "segment_count": 2
+  },
+  {
+    "case_id": "sparse-retrieval-001",
+    "payload": {"source": ["A","B","C","D","E","F","G"], "selected": ["A","D","F","G"], "query": "answer"},
+    "topology": "ARBITRARY",
+    "segment_count": 4
+  },
+  {
+    "case_id": "reorder-001",
+    "payload": {"source": ["A","B","C","D"], "selected": ["C","A","D"], "query": "continue"},
+    "topology": "ARBITRARY",
+    "segment_count": 3
+  }
+]

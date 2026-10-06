@@ -1,0 +1,17 @@
+{
+  "name": "target-mac-hypic-differential-v1",
+  "cases": [
+    {
+      "case_id": "example-canonical-01",
+      "payload": {"prompt": "replace with exact token/prompt payload"},
+      "topology": "CANONICAL",
+      "segment_count": 1
+    },
+    {
+      "case_id": "example-arbitrary-01",
+      "payload": {"prompt": "replace with exact adversarial seam payload"},
+      "topology": "ARBITRARY",
+      "segment_count": 4
+    }
+  ]
+}

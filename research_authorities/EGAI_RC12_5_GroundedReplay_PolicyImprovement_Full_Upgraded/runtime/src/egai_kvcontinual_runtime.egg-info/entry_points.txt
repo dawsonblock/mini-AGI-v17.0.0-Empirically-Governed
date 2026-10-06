@@ -1,0 +1,4 @@
+[console_scripts]
+egai = egai.cli:main
+kvcontinual-continual = kvcontinual.continual.cli:main
+kvcontinual-execution = kvcontinual.execution.cli:main

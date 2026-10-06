@@ -1,0 +1,11 @@
+name: host-release-gate
+on:
+  push:
+  pull_request:
+jobs:
+  host:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Host qualification
+        run: ./scripts/release/host_gate.sh

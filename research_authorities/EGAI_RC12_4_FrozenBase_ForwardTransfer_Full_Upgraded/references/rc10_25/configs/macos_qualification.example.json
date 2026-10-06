@@ -1,0 +1,11 @@
+{
+  "max_logit_kl": 0.02,
+  "min_top1_agreement": 0.995,
+  "max_failure_rate": 0.01,
+  "min_case_count": 100,
+  "min_median_ttft_speedup": 1.0,
+  "policy": "Acceleration remains disabled unless a version-2 certificate passes and matches the exact model, backend, target Mac hardware/runtime, release manifest, qualification suite, and qualification ledger head.",
+  "certificate_version": 2,
+  "suite_manifest_required": true,
+  "deployment_binding_required": true
+}

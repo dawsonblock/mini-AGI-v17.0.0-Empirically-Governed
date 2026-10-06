@@ -1,0 +1,20 @@
+training:
+  adapter_type: lora
+  base_model_frozen: true
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: all-linear
+  learning_rate: 0.00002
+  hyperparameters_are_experimental: true
+  new_fraction: 0.67
+  replay_fraction: 0.33
+  require_verified_source_or_evidence: true
+
+promotion:
+  min_target_gain: 0.03
+  max_general_regression: 0.01
+  require_critical_non_regression: true
+  require_cache_quality_gate: true
+  require_staged_cache_namespace: true
+  atomic_model_and_cache_namespace_switch: true

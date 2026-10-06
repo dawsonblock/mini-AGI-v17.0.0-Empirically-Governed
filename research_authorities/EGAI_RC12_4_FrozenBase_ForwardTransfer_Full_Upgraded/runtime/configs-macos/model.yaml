@@ -1,0 +1,20 @@
+model:
+  backend: llama.cpp-metal
+  name: local-qwen
+  immutable_base: true
+  tokenizer: local
+  adapter_mode: qualified_external
+  endpoint: http://127.0.0.1:8080/v1
+
+cache_identity:
+  recurrence_impl: upstream-metal-gdn
+  position_scheme: upstream-model
+  layer_layout: upstream-model
+
+# The custom CUDA KVMem execution cache is intentionally not advertised on
+# macOS. Persistent memory and adapter qualification remain enabled.
+macos:
+  native_cuda_kvmem: false
+  execution_cache: upstream-backend
+  persistent_memory: true
+  continual_control_plane: true

@@ -1,0 +1,13 @@
+{
+  "release": "kvmem-qw3-hardening-rc8",
+  "physical_executor_pool_abi": "physical-executor-pool-v1",
+  "host_pool_slots_qualified": 2,
+  "native_cuda_slots_certified": 1,
+  "multi_slot_cuda": "NOT_RUN",
+  "claims": [
+    "distinct per-slot executor ownership is host-qualified",
+    "simultaneous physical runtime leases are host-qualified",
+    "fault isolation and cold recovery are host-qualified",
+    "native CUDA multi-slot execution remains fail-closed"
+  ]
+}

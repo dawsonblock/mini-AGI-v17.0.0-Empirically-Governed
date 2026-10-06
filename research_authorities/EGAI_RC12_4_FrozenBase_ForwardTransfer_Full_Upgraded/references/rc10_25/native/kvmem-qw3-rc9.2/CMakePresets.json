@@ -1,0 +1,26 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {"major": 3, "minor": 23, "patch": 0},
+  "configurePresets": [
+    {
+      "name": "macos-arm64-host",
+      "displayName": "macOS Apple Silicon host/reference build",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/macos-arm64-host",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "QW3_ENABLE_CUDA": "OFF",
+        "QW3_ENABLE_FLASHINFER": "OFF",
+        "QW3_BUILD_SERVER": "OFF",
+        "QW3_BUILD_TESTS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {"name": "macos-arm64-host", "configurePreset": "macos-arm64-host", "jobs": 4}
+  ],
+  "testPresets": [
+    {"name": "macos-arm64-host", "configurePreset": "macos-arm64-host", "output": {"outputOnFailure": true}}
+  ]
+}

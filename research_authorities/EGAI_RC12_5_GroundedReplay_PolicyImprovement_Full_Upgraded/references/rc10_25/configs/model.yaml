@@ -1,0 +1,21 @@
+model:
+  coherent_memory_target: Qwen3.5-4B-class-hybrid
+  continual_learning_control: conventional-dense-model
+  immutable_base: true
+  adapter_policy: single_promoted_adapter_pinned_per_request
+
+execution_identity:
+  include:
+    - base_weights
+    - adapter_manifest_bytes_order_scales_and_composition
+    - tokenizer
+    - architecture
+    - position_config
+    - quantization_config
+    - kernel_abi
+    - recurrence_impl
+    - tensor_layout
+    - activation_dtype
+    - cache_dtype
+    - runtime_learning_state
+  weight_change_default: REPLAY_REQUIRED

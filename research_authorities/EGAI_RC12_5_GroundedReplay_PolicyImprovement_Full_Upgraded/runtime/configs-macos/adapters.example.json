@@ -1,0 +1,12 @@
+[
+  {
+    "adapter_id": "coding",
+    "path": "/absolute/path/to/coding-lora.gguf",
+    "backend_id": 0,
+    "description": "Python C++ debugging software engineering coding",
+    "tags": ["code", "python", "cpp"],
+    "priority": 0.7,
+    "scale": 1.0,
+    "enabled": true
+  }
+]

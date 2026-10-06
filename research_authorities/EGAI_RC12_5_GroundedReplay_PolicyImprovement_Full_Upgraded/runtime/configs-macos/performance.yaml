@@ -1,0 +1,39 @@
+profile:
+  release: 12.5.0
+  target: apple-silicon
+  backend: auto             # auto | mlx | llama.cpp
+  context_tokens: 32768
+  parallel_requests: 1
+  system_reserve_fraction: 0.18
+  min_system_reserve_gib: 4.0
+  workspace_fraction: 0.18
+  min_workspace_gib: 1.5
+
+context_budget:
+  persistent_memory_tokens: 1024
+  retrieval_max_items: 6
+  prefer_retrieval_over_long_prompt: true
+
+llama_cpp:
+  flash_attention: true
+  cache_type_k: null        # set only after exact local qualification, e.g. q8_0
+  cache_type_v: null
+  batch_size: null
+  ubatch_size: null
+  threads: null
+  speculative_draft_model: null
+
+mlx:
+  quantization_bits_recommended: 4
+  convert_requires_runtime_flag_detection: true
+  candidate_lora_training: true
+  base_model_mutation: false
+
+qualification:
+  measure_ttft: true
+  measure_decode_tokens_per_second: true
+  bind_model_digest: true
+  bind_macos_version: true
+  bind_hardware_model: true
+  bind_runtime_source_closure: true
+  production_hypic_requires_exact_differential_qualification: true

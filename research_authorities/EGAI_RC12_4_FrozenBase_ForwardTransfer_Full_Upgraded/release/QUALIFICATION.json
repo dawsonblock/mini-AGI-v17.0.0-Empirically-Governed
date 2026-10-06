@@ -1,0 +1,53 @@
+{
+  "claims": "RC10.5 Mac profile adds a model-specific host/fp64 Gated-DeltaNet recurrence oracle and exact fixed-input (T,Z) block composition while retaining exact selected replay as the full-model correctness authority. Native Metal GDN/TZ capture and seam/suffix repair are not claimed complete.",
+  "coherent_hybrid": {
+    "adaptive_repair_policy": "IMPLEMENTED_HOST_POLICY",
+    "affine_reference_composition": "IMPLEMENTED_HOST",
+    "cache_identity_fail_closed": "IMPLEMENTED_HOST",
+    "exact_selected_replay_oracle": "RETAINED_FROM_RC9.2",
+    "native_seam_replay": "NOT_IMPLEMENTED",
+    "qwen_gdn_transition_capture": "NOT_IMPLEMENTED_METAL_OR_CUDA_BLOCK_CAPTURE",
+    "qwen_gdn_transition_reference": "IMPLEMENTED_HOST_FP64",
+    "strict_recurrent_layer_closure": "IMPLEMENTED_HOST",
+    "suffix_replay": "NOT_IMPLEMENTED"
+  },
+  "continual_learning": {
+    "admin_mutation_boundary": "IMPLEMENTED",
+    "candidate_digest_binding": "IMPLEMENTED",
+    "native_qw3_lora_execution": "NOT_IMPLEMENTED",
+    "path_safe_registry": "IMPLEMENTED",
+    "persistent_temporal_memory": "IMPLEMENTED_REFERENCE",
+    "rehash_before_promotion": "IMPLEMENTED",
+    "transactional_supersession": "IMPLEMENTED",
+    "weighted_replay_without_replacement": "IMPLEMENTED"
+  },
+  "cuda_gpu": {
+    "reason": "Artifact-generation environment does not expose a supported NVIDIA CUDA GPU/model checkpoint for coherent-state integration qualification.",
+    "required_gate": "scripts/release/gpu_gate.sh plus future RC10 coherent-hybrid model gate",
+    "status": "NOT_RUN"
+  },
+  "host": {
+    "configuration": "host-only, CUDA disabled, Debug/O0 validation build",
+    "expected_native_tests": 21,
+    "expected_python_tests": 33,
+    "gdn_reference_oracle": "PASS",
+    "native_ctest": "21/21 PASS",
+    "post_build_release_assertions": "PASS",
+    "python_pytest": "33/33 PASS",
+    "qualification_note": "Full wrapper exceeded the execution harness timeout after tests; every remaining post-build assertion was rerun against the same clean build and passed.",
+    "source_audit": "PASS",
+    "source_manifest": "PASS",
+    "status": "PASS"
+  },
+  "parent_release": "kvmem-qw3-hardening-rc9.2",
+  "qualification_date": "2026-10-04",
+  "release": "kvmem-qw3-coherent-continual-rc10",
+  "session_architecture": {
+    "executor_scheduler": "N_SLOT_HOST_ABI_EXACT_LEASE_FENCING",
+    "native_multi_slot_cuda": "FAIL_CLOSED_NOT_CERTIFIED",
+    "physical_executor_pool_scope": "persistent-session-runtime",
+    "physical_executor_runtime_abi": "executor-slot-runtime-v2",
+    "physical_executor_slots_certified": 1,
+    "policy": "detachable-host-state"
+  }
+}

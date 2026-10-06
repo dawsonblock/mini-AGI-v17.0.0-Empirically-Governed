@@ -1,0 +1,64 @@
+{
+  "qualification_date": "2026-10-04",
+  "release": "kvmem-qw3-hardening-rc9.2",
+  "parent_release": "kvmem-qw3-hardening-rc9.1",
+  "host": {
+    "status": "PASS",
+    "configuration": "host-only, CUDA disabled, Debug/O0 validation build",
+    "ctest": {
+      "passed": 19,
+      "failed": 0
+    },
+    "regressions": [
+      "stale scheduler lease cannot release a newer same-session owner",
+      "stale physical lease cannot release a newer physical owner",
+      "omitted workspace cannot bypass an existing workspace binding",
+      "trusted internal snapshot lookup preserves bound-session persistence",
+      "negative ExactMass raw-key caps fail before model loading",
+      "native multi-slot remains fail-closed"
+    ]
+  },
+  "session_architecture": {
+    "policy": "detachable-host-state",
+    "workspace_binding": "STRICT_BOUND_ID_REQUIRED_FOR_PUBLIC_LOOKUP",
+    "maintenance_lookup": "EXPLICIT_TRUSTED_INTERNAL_ONLY",
+    "executor_scheduler": "N_SLOT_HOST_ABI_EXACT_LEASE_FENCING",
+    "physical_executor_runtime_abi": "executor-slot-runtime-v2",
+    "physical_executor_pool_scope": "persistent-session-runtime",
+    "physical_executor_slots_certified": 1,
+    "native_multi_slot_cuda": "FAIL_CLOSED_NOT_CERTIFIED",
+    "failed_executor_lineage": "DIRTY_QUARANTINE",
+    "dirty_slot_reuse": "FORCED_COLD_RESET"
+  },
+  "retrieval_correctness": {
+    "partial_block_mean_merge": "IMPLEMENTED",
+    "decode_boundary_mean_merge": "IMPLEMENTED",
+    "subblock_decode_merge": "IMPLEMENTED_FOR_CONTIGUOUS_PROTOTYPES",
+    "strict_scorer_contract": "IMPLEMENTED",
+    "exactmass_block_scalability": "IMPLEMENTED_CUDA_TEST_PACKAGED_NOT_RUN",
+    "exactmass_raw_key_allocation": "EXPLICIT_PREALLOCATION_CAP"
+  },
+  "cuda_gpu": {
+    "status": "NOT_RUN",
+    "reason": "Artifact-generation environment does not expose nvcc/a supported NVIDIA CUDA GPU or model weights.",
+    "required_gate": "scripts/release/gpu_gate.sh",
+    "required_new_tests": [
+      "qw3-kvmem-kmean-merge",
+      "qw3-kvmem-exactmass-largeblocks"
+    ]
+  },
+  "coherence": {
+    "one_shot_selected_replay": "IMPLEMENTED_AS_COHERENT_REBUILD_MODE",
+    "persistent_selected_replay": "FAIL_CLOSED_NOT_IMPLEMENTED",
+    "kvmi_012": "OPEN_RESEARCH_BOUNDARY"
+  },
+  "release_source_audit": "PASS",
+  "source_manifest_verification": "PASS",
+  "clean_host_build": "PASS",
+  "host_ctest": "19/19 PASS",
+  "python_eval_tests": "9/9 PASS",
+  "nemo_adapter_typescript_check": "PASS (tsc 5.8.3 strict noEmit)",
+  "official_host_gate": "PASS",
+  "claims": "RC9.2 host/control/session/scheduler/resource and deterministic source correctness are qualified by the sealed host gate. CUDA-dependent changes and native multi-slot execution remain unqualified until scripts/release/gpu_gate.sh passes on the target NVIDIA system.",
+  "validation_report": "release/RC9_2_VALIDATION_REPORT.md"
+}

@@ -1,0 +1,18 @@
+{
+  "release": "EGAI_RC12.2_Converged_Continual_Runtime_Full_Upgraded",
+  "version": "12.2.0",
+  "merged_runtime_tests": {"passed": 161, "failed": 0},
+  "authority_tests": {"passed": 101, "failed": 0},
+  "compileall": "pass",
+  "wheel_import": "pass",
+  "wheel_path": "runtime/dist/egai_kvcontinual_runtime-12.2.0-py3-none-any.whl",
+  "wheel_sha256": "1408188702945599e561d9acd33d161727914eff849e6532e668f338a340aa9d",
+  "production_hypic_acceleration": "fail-closed until exact target-Apple-Silicon differential qualification passes",
+  "target_macos_hardware_qualification": "not-run-non-macos",
+  "automatic_adapter_promotion": "disabled",
+  "learned_plasticity_routing": "disabled",
+  "model_based_imagination_as_evidence": "forbidden",
+  "shared_weight_learning": "disabled",
+  "architecture_self_modification": "disabled",
+  "inherited_source_domains": "RC11.7/RC10.25/EGAI-v3/EGAI-v2.2 source trees retained from RC12.1; current release validation re-ran the merged runtime and authority suites"
+}

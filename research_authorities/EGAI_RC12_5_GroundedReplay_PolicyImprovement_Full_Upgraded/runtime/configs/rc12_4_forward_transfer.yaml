@@ -1,0 +1,30 @@
+release: 12.4.0
+experiment:
+  primary_hypothesis: "Frozen-base memory, skills, composition, replay and active experimentation improve unseen future-task performance."
+  checkpoints: [0, 50, 100, 250, 500, 1000, 2500, 5000]
+  ablation_stages:
+    - B0_FROZEN
+    - B1_EPISODIC
+    - B2_PROCEDURAL
+    - B3_COMPOSITION
+    - B4_SELECTIVE_REPLAY
+    - B5_ACTIVE_EXPERIMENT
+qualification:
+  alpha: 0.05
+  min_forward_transfer: 0.01
+  min_transfer_breadth: 0.50
+  min_retention: 0.99
+  min_foundation_retention: 0.99
+  min_security: 1.0
+  max_foundation_regression: 0.01
+  required_rings: [4, 5]
+  require_positive_ci_on_required_rings: true
+  bootstrap_samples: 2000
+hard_invariants:
+  base_model_digest_constant: true
+  hidden_suite_one_time_lease: true
+  hidden_suite_encrypted_at_rest: true
+  learner_receives_no_hidden_case_payloads: true
+  imagined_outcomes_are_not_evidence: true
+  no_automatic_adapter_promotion: true
+  no_shared_weight_online_learning: true

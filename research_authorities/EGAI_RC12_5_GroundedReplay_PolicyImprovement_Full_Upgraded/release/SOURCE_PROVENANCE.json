@@ -1,0 +1,23 @@
+{
+  "release_name": "kvmem-qw3-coherent-continual-rc10",
+  "release_date": "2026-10-04",
+  "native_parent_artifact": "kvmem-qw3-hardening-rc9.2-full-upgraded.zip",
+  "native_parent_artifact_sha256": "e1e86246b77e0cd7ef6a3a1338c9d3d2828c971d63e930ed30544f692bb347ac",
+  "continual_reference_artifact": "KVContinual_RC10_Coherent_Hybrid_Continual_Memory_Full_Upgraded.zip",
+  "continual_reference_artifact_sha256": "990817fbf2d0e62dd23739fa00bd2881855daf8eef47577357a53520d553d8c1",
+  "source_archive": "kvmem-qw3-hardening-rc9.2-full-upgraded.zip",
+  "source_archive_sha256": "e1e86246b77e0cd7ef6a3a1338c9d3d2828c971d63e930ed30544f692bb347ac",
+  "parent_hardening_artifact": "kvmem-qw3-hardening-rc9.2-full-upgraded.zip",
+  "parent_hardening_artifact_sha256": "e1e86246b77e0cd7ef6a3a1338c9d3d2828c971d63e930ed30544f692bb347ac",
+  "upstream_git_history_present_in_source_archive": false,
+  "release_scope": [
+    "RC9.2 native runtime retained",
+    "host/reference coherent recurrent segment composition",
+    "strict execution-cache identity and recurrent-layer closure",
+    "continual-learning control-plane hardening",
+    "digest-bound candidate qualification and promotion",
+    "persistent temporal cognitive memory",
+    "exact selected replay retained as correctness oracle",
+    "model-specific GDN composition/seam CUDA integration remains unqualified"
+  ]
+}

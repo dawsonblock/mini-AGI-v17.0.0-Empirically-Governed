@@ -1,0 +1,5 @@
+def test_rc1025_target_modules_import():
+ from kvcontinual.rc1025.macos_qualification_preflight import MacQualificationPreflight
+ from kvcontinual.rc1025.promotion_wal import PromotionWal
+ from kvcontinual.rc1025.hybrid.tail_injection import build_tail_injection_receipt
+ assert MacQualificationPreflight and PromotionWal and build_tail_injection_receipt

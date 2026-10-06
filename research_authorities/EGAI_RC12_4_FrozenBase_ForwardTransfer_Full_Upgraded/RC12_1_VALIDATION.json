@@ -1,0 +1,36 @@
+{
+  "adapters": "available as candidate mechanisms but not authorized by default",
+  "architecture_self_modification": "disabled",
+  "compileall": "pass",
+  "merged_runtime_tests": {
+    "failed": 0,
+    "passed": 147
+  },
+  "metal_kernel_validation": "not-run-non-macos",
+  "production_hypic_acceleration": "fail-closed until exact target-Apple-Silicon differential qualification passes",
+  "release": "EGAI_RC12.1_Converged_Continual_Runtime_Full_Upgraded",
+  "shared_weight_learning": "disabled",
+  "source_validations": {
+    "egai_v2_2": {
+      "failed": 0,
+      "passed": 36
+    },
+    "egai_v3_rc8_2": {
+      "failed": 0,
+      "passed": 31
+    },
+    "kvcontinual_rc10_25": {
+      "failed": 0,
+      "passed": 110
+    },
+    "rc11_7_runtime": {
+      "failed": 0,
+      "passed": 110
+    }
+  },
+  "target_macos_hardware_qualification": "not-run-non-macos",
+  "version": "12.1.0",
+  "wheel_import": "pass",
+  "wheel_path": "runtime/dist/egai_kvcontinual_runtime-12.1.0-py3-none-any.whl",
+  "wheel_sha256": "91fe490289037f2ef92a858fd3eed20ff1f15d962d9eb165fc75596ea73098fe"
+}

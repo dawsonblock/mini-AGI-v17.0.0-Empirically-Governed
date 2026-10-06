@@ -1,0 +1,16 @@
+{
+  "model": {
+    "base_weights": "sha256:REPLACE_WITH_EXACT_BASE_WEIGHT_MANIFEST_DIGEST",
+    "adapter_manifest": "sha256:REPLACE_WITH_EXACT_ADAPTER_SET_DIGEST_OR_NONE_MANIFEST",
+    "tokenizer": "sha256:REPLACE_WITH_EXACT_TOKENIZER_DIGEST",
+    "architecture": "sha256:REPLACE_WITH_OUTPUT_OF_inspect_hybrid_model.py",
+    "position_config": "sha256:REPLACE_WITH_POSITION_CONFIG_DIGEST",
+    "quantization_config": "none"
+  },
+  "kernel_abi": "transformers-qwen35-structural-capture-v1",
+  "recurrence_impl": "hf-qwen35-gdn-fixed-input-v1",
+  "tensor_layout": "qwen35-repeat-interleave-kheads;state=[V,Dk,Dv]",
+  "activation_dtype": "float16",
+  "cache_dtype": "float32",
+  "runtime_learning_state": "frozen"
+}

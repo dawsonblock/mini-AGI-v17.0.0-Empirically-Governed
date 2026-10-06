@@ -1,0 +1,31 @@
+release: 12.5.0
+mode: grounded-replay-policy-improvement
+replay:
+  grounded_only: true
+  require_evidence_digest: true
+  prefix_only_observability: true
+  holdout_encrypted: true
+  min_holdout_episodes: 12
+objective:
+  attempt_cost: 0.01
+  round_cost: 0.001
+  budget_overrun_penalty: 1.0
+qualification:
+  alpha: 0.05
+  min_mean_gain: 0.01
+  min_win_rate: 0.60
+  max_loss_rate: 0.20
+  max_cost_delta: 0.25
+  require_positive_ci: true
+  bootstrap_samples: 2000
+live_canary:
+  required: true
+  min_cases: 20
+  min_mean_gain: 0.0
+  max_loss_rate: 0.10
+  require_security_clean: true
+promotion:
+  automatic: false
+  independent_authority_required: true
+model_imagination:
+  enabled: false

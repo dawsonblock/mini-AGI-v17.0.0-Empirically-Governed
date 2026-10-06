@@ -1,0 +1,5 @@
+Validation performed in build environment:
+- Python compileall: PASS
+- v15.5 physical artifact closure + v16 convergence/dream/fresh-transfer/runtime-closure2 + v17 gate focused suite: PASS (19 tests)
+- Legacy v15.4 closure semantics are retained only as historical compatibility code; v17 acceptance uses physical v15.5/v17 binding semantics.
+- GPU/native full build was not executed in this CPU build environment.

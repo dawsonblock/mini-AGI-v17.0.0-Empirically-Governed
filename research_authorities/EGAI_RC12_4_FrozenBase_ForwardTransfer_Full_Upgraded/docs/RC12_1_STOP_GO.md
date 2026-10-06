@@ -1,0 +1,3 @@
+# RC12.1 Stop/Go Gates
+
+L6 adapters remain default-off until a repeated representation bottleneck survives memory/skill/composition fixes and a qualified adapter improves hidden future families with no hard-gate regression. L7 capacity expansion requires explicit CapacityProbe evidence. L8 shared consolidation requires broad cross-domain transfer and foundation retention. L9 architecture modification remains research-only. Model-based imagination may nominate real experiments but cannot become evidence. HYPIC/Metal acceleration remains fail-closed until exact target-Mac differential qualification passes.

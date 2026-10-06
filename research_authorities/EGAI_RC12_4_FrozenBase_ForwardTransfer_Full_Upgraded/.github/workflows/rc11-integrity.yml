@@ -1,0 +1,27 @@
+name: rc11-integrity
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  execution-memory:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install execution-memory test dependencies
+        run: python -m pip install -e './execution_memory[dev]'
+      - name: Run RC11 execution-memory integrity suite
+        run: python -m pytest -q execution_memory/tests
+      - name: Compile execution-memory Python
+        run: python -m compileall -q execution_memory/src
+
+      - name: Verify checked-in release manifest
+        run: python scripts/rc11/verify_release.py --root .

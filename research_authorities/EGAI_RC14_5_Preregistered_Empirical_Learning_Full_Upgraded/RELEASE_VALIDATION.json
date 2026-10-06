@@ -1,0 +1,60 @@
+{
+  "current_release_tests_executed": 362,
+  "current_release_tests_failed": 0,
+  "environment": {
+    "machine": "x86_64",
+    "platform": "Linux",
+    "python": "3.13.5"
+  },
+  "qualification_boundary": [
+    "No macOS/Metal hardware qualification was run.",
+    "No CUDA hardware qualification was run.",
+    "The RC14.5 preregistration, ablation, isolation, and L6 evidence-replay machinery is validated with deterministic regression fixtures; no large-model continual-learning gain has been demonstrated in this release.",
+    "No independent scientific reproduction of a real model-learning result was run.",
+    "FreshTask secrecy requires OS/service-principal isolation of daemon/private root/AES key/capability tokens.",
+    "Witness and runtime-attestation signatures establish binding to configured verifier roots, not truth of external claims by themselves.",
+    "Portable native source is unchanged from RC14.4, where 25/25 CTest targets passed freshly; the RC14.5 rebuild attempt exceeded the execution ceiling while compiling qwen_native_backend.cpp and is not counted as current-release execution.",
+    "Passing tests validate software invariants and evidence plumbing, not AGI or autonomous recursive self-improvement.",
+    "Default L7-L10 persistence remains disabled/proposal-only."
+  ],
+  "rc14_5_convergence_and_learning_subset": {
+    "command": "PYTHONPATH=src-python python -m pytest -q tests-python/rc14/test_rc14_convergence.py tests-python/rc14/test_rc14_measured_learning.py tests-python/rc14/test_rc14_empirical_learning.py",
+    "failed": 0,
+    "passed": 42
+  },
+  "schema": "egai-rc14-release-validation-v1",
+  "status": "pass-python-control-plane-preregistered-empirical-learning; portable-native-inherited-from-unchanged-rc14.4-source",
+  "suites": [
+    {
+      "command": "PYTHONPATH=src-python python -m pytest -q tests-python",
+      "executed_in_this_release": true,
+      "failed": 0,
+      "name": "active_python",
+      "passed": 236
+    },
+    {
+      "command": "PYTHONPATH=references/authority python -m pytest -q references/authority/tests",
+      "executed_in_this_release": true,
+      "failed": 0,
+      "name": "retained_authority_reference",
+      "passed": 101
+    },
+    {
+      "command": "PYTHONPATH=references/oracle_reference python -m pytest -q references/oracle_reference/tests",
+      "executed_in_this_release": true,
+      "failed": 0,
+      "name": "retained_oracle_reference",
+      "passed": 25
+    },
+    {
+      "command": "cmake -S . -B build-rc14_5-native -DCMAKE_BUILD_TYPE=Release && cmake --build build-rc14_5-native -j1 && ctest --test-dir build-rc14_5-native --output-on-failure",
+      "executed_in_this_release": false,
+      "failed": 0,
+      "inherited_from_version": "14.4.0",
+      "name": "portable_native_ctest",
+      "passed": 25,
+      "reason": "native sources unchanged; RC14.5 fresh compile attempt exceeded command execution ceiling during qwen_native_backend.cpp"
+    }
+  ],
+  "version": "14.5.0"
+}

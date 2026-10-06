@@ -1,0 +1,12 @@
+{
+  "execution_baseline": "exact-selected-replay",
+  "manifest_sha256": "128f23f6cb97f2e40c57106e2df9a4d57b063fa872e02f8bb81ac9bf337ca3f9",
+  "name": "mini-agi-converged",
+  "production_mac_qualified": false,
+  "release_key_sha256": "77e14bc73e1e97ae7b787111dccbef78f78c6a24a3323ad2923d3a90d1edd1b6",
+  "sbom_sha256": "608928e28c196de7a2bb0a1ab300ad16817837c0dfcd1a97d3ee78b8decd1627",
+  "schema": "mini-agi-detached-release-attestation-v1",
+  "signing_scope": "local-build-integrity; newly generated key, no inherited maintainer trust",
+  "validation_sha256": "5b1bc6766dfeb13b42a1f9d10ffa2ec4c0663b99d7cb32e61663c773f994c4a1",
+  "version": "14.5.0"
+}

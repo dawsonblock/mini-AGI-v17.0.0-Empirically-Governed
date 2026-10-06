@@ -1,0 +1,27 @@
+reconstruction:
+  default_mode: BALANCED
+  arbitrary_pic:
+    primary: HYPIC_SEAM8
+    fixed_seam_width: 8
+    experimental_single_state_init: false
+    unsafe_adaptive_seams: false
+  canonical_prefix:
+    primary: EXACT_PREFIX_REPLAY
+    allow_tail_replay_experimental: false
+    allow_suffix_replay_experimental: false
+  exact_oracle: EXACT_SELECTED_REPLAY
+  online_risk_gate:
+    max_seam_hidden_rel_l2: 0.08
+    max_seam_attention_rel_l2: 0.08
+    max_routing_disagreement: 0.10
+    max_conv_correction_rel_l2: 0.15
+    max_historical_failure_rate: 0.05
+    max_joins: 16
+  shadow_exact_sample_rate: 0.01
+
+checkpoints:
+  exact_interval_tokens: 8192
+
+cache_tiers:
+  authoritative_source: durable
+  execution_artifacts: [nvme, dram, hbm]

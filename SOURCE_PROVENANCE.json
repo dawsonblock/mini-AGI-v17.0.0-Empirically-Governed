@@ -1,0 +1,27 @@
+{
+  "release": "16.0.1",
+  "strategy": "v15.4 execution trunk + RC12.4 independent forward-transfer qualification + Alpha9 proposal-side least-permanent plasticity + Dream-RSI meta-exploration + RuntimeClosure2",
+  "authority_note": "No donor proposal/learning plane receives promotion authority. Existing promotion/StateEpoch authority remains the sole servable-state mutation path.",
+  "sources": [
+    {
+      "archive": "mini-AGI-v15.4.0-RuntimeClosure1-Measured-Governed-Serving-Full-Upgraded.zip",
+      "sha256": "25ee8d70979c9a1c37c83cea6e0ba488b02a8e1a98e9a79d1ed3dc995fc97e6d",
+      "role": "execution trunk, governed serving, measured runtime closure, learned-skill/adapter serving, native LM-head LoRA"
+    },
+    {
+      "archive": "EGAI_RC12_4_FrozenBase_ForwardTransfer_Full_Upgraded.zip",
+      "sha256": "40d51562df6cb7579631833783bde4963998546afaf9c5638730ed4dff494890",
+      "role": "frozen-base hidden forward-transfer scientific qualification and authority/reference suites"
+    },
+    {
+      "archive": "mini-AGI-v14.1.0-alpha9-Adaptive-Plasticity-Full-Implemented-Debugged.zip",
+      "sha256": "87a2bdd2cf4a61f1e2f008b88baac9b026904c9c9ee761fbaf682edee1f8eae7",
+      "role": "least-permanent adaptive plasticity policy and calibration"
+    },
+    {
+      "archive": "Dream-RSI-Governed-RSI-v1.0.0-Full-Upgraded.zip",
+      "sha256": "9d142cb36fd5d6cfaf1db62a2437ae40097cb1e41e91b0eb8ac4604216131141",
+      "role": "replay-driven meta-exploration/search-policy optimization"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+name: macOS host + continual tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  macos-arm64-host:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: brew install cmake ninja openssl@3 python@3.12
+      - name: Native host build
+        run: |
+          cmake -S . -B build-macos -G Ninja \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DQW3_ENABLE_CUDA=OFF \
+            -DQW3_BUILD_TESTS=ON
+          cmake --build build-macos -j 3
+          ctest --test-dir build-macos --output-on-failure
+      - name: Continual tests
+        run: |
+          /opt/homebrew/bin/python3.12 -m venv .venv
+          source .venv/bin/activate
+          pip install -e './continual[dev]'
+          pytest -q continual/tests

@@ -1,0 +1,29 @@
+{
+  "non_authoritative_prefixes": [
+    "references/",
+    "release/wheels/"
+  ],
+  "release": "EGAI_RC12_2_1_Converged_Continual_Runtime_Full_Upgraded",
+  "restrictions": [
+    "target-Mac HYPIC/Metal differential qualification required",
+    "automatic adapter promotion disabled",
+    "learned plasticity authority disabled",
+    "shared-weight learning disabled",
+    "architecture self-modification disabled"
+  ],
+  "source_closure_digest": "sha256:cbf043fcd75d18dbe95afaffc57982ebba3288723f1a5a12aa204246b13c80d7",
+  "source_closure_files": 1161,
+  "validation": {
+    "authority_tests": 101,
+    "compileall": "passed",
+    "runtime_tests": 168,
+    "source_closure": "passed",
+    "wheel_import": "passed"
+  },
+  "version": "12.2.1",
+  "wheel": {
+    "bytes": 300081,
+    "path": "release/wheels/egai_kvcontinual_runtime-12.2.1-py3-none-any.whl",
+    "sha256": "sha256:e71c225676133d30018c9691be3c69664488569218ac79c1b1e78a44f3083cdf"
+  }
+}

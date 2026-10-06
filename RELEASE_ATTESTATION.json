@@ -1,0 +1,8 @@
+{
+  "schema": "mini-agi-v16.0.1-local-release-attestation-v1",
+  "version": "16.0.1",
+  "status": "UNSIGNED_LOCAL_VALIDATION",
+  "note": "The parent release signature is intentionally not reused because this source tree changed. Generate a new release signature with an operator-controlled release key after independent validation.",
+  "validation_file": "RELEASE_VALIDATION.json",
+  "source_manifest": "release/source-manifest.sha256"
+}

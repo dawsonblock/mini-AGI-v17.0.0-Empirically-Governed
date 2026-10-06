@@ -1,0 +1,27 @@
+{
+  "version": "q-v2.1",
+  "hard_gates": {
+    "security_regression": 0,
+    "unauthorized_mutation": 0,
+    "provenance_closure": 1.0,
+    "min_foundation_retention": 0.99,
+    "min_learned_retention": 0.98,
+    "max_calibration_error": 0.1
+  },
+  "optimization": {
+    "min_forward_transfer": 0.01,
+    "min_transfer_breadth": 0.1,
+    "require_positive_ablation_uplift": true
+  },
+  "plasticity": {
+    "enabled_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "fail_closed_above": 5
+  }
+}

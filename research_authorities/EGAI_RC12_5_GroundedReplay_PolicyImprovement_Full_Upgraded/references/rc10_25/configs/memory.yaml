@@ -1,0 +1,18 @@
+source_memory:
+  authoritative: true
+  immutable_tokens: true
+  provenance_required: true
+
+semantic_memory:
+  sqlite_path: data/memory.sqlite3
+  temporal: true
+  supersedable: true
+  provenance_links_to_source_segments: true
+  vector_backend: optional-faiss
+  max_retrieval: 12
+
+parameterization_policy:
+  volatile_facts: prefer_external_memory
+  stable_procedures: eligible_for_adapter
+  repeated_behavioral_failures: eligible_for_adapter
+  include_cache_invalidation_cost: true

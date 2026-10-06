@@ -1,0 +1,12 @@
+{
+  "release": "kvmem-qw3-hardening-rc9",
+  "physical_executor_pool_abi": "physical-executor-pool-v1",
+  "native_pool_wired": true,
+  "native_executor_owner": "KvMemPhysicalExecutorPool<QwenExecutor>",
+  "compatibility_generation_slot": 0,
+  "native_cuda_slots_certified": 1,
+  "multi_slot_cuda": "NOT_RUN",
+  "fail_closed_above_certified_slots": true,
+  "superseded_by": "kvmem-qw3-hardening-rc9.2",
+  "note": "RC9 parent qualification; RC9.1 added lease/workspace hardening and RC9.2 adds boundary-index/ExactMass/release-scope repairs."
+}

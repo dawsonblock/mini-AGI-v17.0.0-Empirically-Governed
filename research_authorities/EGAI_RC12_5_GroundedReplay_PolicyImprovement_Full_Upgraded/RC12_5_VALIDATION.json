@@ -1,0 +1,43 @@
+{
+  "release": "12.5.0",
+  "profile": "Grounded Replay Policy Improvement",
+  "validation": {
+    "runtime_pytest": {
+      "status": "passed",
+      "tests": 194
+    },
+    "grounded_replay_policy_tests": {
+      "status": "passed",
+      "tests": 7
+    },
+    "python_compileall": {
+      "status": "passed"
+    },
+    "shell_syntax": {
+      "status": "passed"
+    },
+    "wheel_build": {
+      "status": "passed",
+      "method": "pip wheel --no-build-isolation"
+    },
+    "source_closure": {
+      "status": "performed_after_validation_file_freeze"
+    },
+    "zip_crc": {
+      "status": "performed_after_archive_creation"
+    },
+    "portable_native_ctest": {
+      "status": "not_rerun",
+      "reason": "portable native rebuild exceeded this generation run time budget; C++ sources were inherited unchanged from RC12.4"
+    }
+  },
+  "scientific_claims_not_yet_made": [
+    "replay-qualified policy improves real online future-task performance",
+    "model-based imagination is calibrated enough for authoritative use",
+    "target-Mac Metal/HYPIC equivalence unless separately qualified on the exact Apple machine",
+    "automatic adapter promotion",
+    "learned plasticity authority",
+    "shared-weight online learning",
+    "architecture self-modification"
+  ]
+}

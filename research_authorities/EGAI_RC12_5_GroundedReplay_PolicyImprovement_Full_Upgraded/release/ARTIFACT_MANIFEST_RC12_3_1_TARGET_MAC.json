@@ -1,0 +1,49 @@
+{
+  "artifacts": [
+    {
+      "path": "release/RC12_3_1_TARGET_MAC_SOURCE_CLOSURE.json",
+      "sha256": "sha256:714e258cc0af2e7661a22305863e299a45ece6281ecab0c4081bf3623549fc87",
+      "size": 217183
+    },
+    {
+      "path": "release/wheels/egai_kvcontinual_runtime-12.3.1-py3-none-any.whl",
+      "sha256": "sha256:b6db0f46fc77dfd5ea5c481cac05f95b35a798edf6ac002b5e613744e42b9e14",
+      "size": 308255
+    },
+    {
+      "path": "README.md",
+      "sha256": "sha256:422453a5d4189e6c6a3b11052bd709e1b0f88c4f78e4d03313236e1db5f0ba9a",
+      "size": 3370
+    },
+    {
+      "path": "FULL_UPGRADED_BUILD_STATUS.md",
+      "sha256": "sha256:8dda3f5b6156caec0bdd9df1c510cb43dbd626ed26b65b31dd6234e80aa8610c",
+      "size": 2722
+    },
+    {
+      "path": "RC12_3_1_TARGET_MAC_BUILD_STATUS.md",
+      "sha256": "sha256:a487eb5ede141b678e6d8242c24373ccf99983239e60b30f1f4a3cc44cd75778",
+      "size": 454
+    },
+    {
+      "path": "docs/RC12_3_1_TARGET_MAC_QUALIFICATION.md",
+      "sha256": "sha256:09ff636ac49315b33a216a296925fde2b99511b41535296e5fbfb35447aed943",
+      "size": 2777
+    }
+  ],
+  "manifest_digest": "sha256:0289c04959a4fcae72238dd1b16c719cd0c0e5d49a266cddd78b2f2e28e4c34a",
+  "release": "12.3.1",
+  "release_name": "EGAI_RC12_3_1_TargetMac_Qualification_Full_Upgraded",
+  "schema": "egai.rc12.3.1.target-mac.artifact-manifest.v1",
+  "validation": {
+    "authority_pytest": "101/101 passed",
+    "compileall": "passed",
+    "cross_plane_smoke": "passed",
+    "native_cpp_rebuild_this_pass": "not claimed; native source unchanged from RC12.3 parent",
+    "oracle_pytest": "25/25 passed",
+    "runtime_pytest": "180/180 passed",
+    "shell_syntax": "passed",
+    "target_apple_hardware_validation": "not run on generation host",
+    "wheel_build_import": "passed"
+  }
+}
